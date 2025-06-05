@@ -522,7 +522,7 @@
         <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
           <zone h='97892' id='7' param='horz' type-v2='layout-flow' w='98720' x='640' y='1054'>
             <zone h='97892' id='5' type-v2='layout-basic' w='83840' x='640' y='1054'>
-              <zone h='97892' id='3' name='ventas x producto' w='26225' x='640' y='1054'>
+              <zone h='97892' id='3' name='ventas x producto' w='26217' x='640' y='1054'>
                 <zone-style>
                   <format attr='border-color' value='#000000' />
                   <format attr='border-style' value='none' />
@@ -530,7 +530,7 @@
                   <format attr='margin' value='4' />
                 </zone-style>
               </zone>
-              <zone h='97892' id='10' name='ventas totales mensuales' w='41925' x='42555' y='1054'>
+              <zone h='97892' id='10' name='ventas totales mensuales' w='41934' x='42546' y='1054'>
                 <zone-style>
                   <format attr='border-color' value='#000000' />
                   <format attr='border-style' value='none' />
@@ -538,7 +538,7 @@
                   <format attr='margin' value='4' />
                 </zone-style>
               </zone>
-              <zone h='97892' id='13' name='precio ajustado vs venta' w='15690' x='26865' y='1054'>
+              <zone h='97892' id='13' name='precio ajustado vs venta' w='15689' x='26857' y='1054'>
                 <zone-style>
                   <format attr='border-color' value='#000000' />
                   <format attr='border-style' value='none' />
@@ -705,7 +705,7 @@
       </cards>
       <simple-id uuid='{ABB0F4A7-C6EF-4A38-BA13-D9B04226715A}' />
     </window>
-    <window class='worksheet' maximized='true' name='ventas totales mensuales'>
+    <window class='worksheet' name='ventas totales mensuales'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -734,7 +734,7 @@
       </cards>
       <simple-id uuid='{BF1258D4-D76A-4D49-8105-B68157CE22EA}' />
     </window>
-    <window class='worksheet' name='precio ajustado vs venta'>
+    <window class='worksheet' maximized='true' name='precio ajustado vs venta'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -775,7 +775,7 @@
           <zoom type='entire-view' />
         </viewpoint>
       </viewpoints>
-      <active id='-1' />
+      <active id='13' />
       <simple-id uuid='{2DA2C6AA-0E74-40F5-AD49-E1456CDBA7EA}' />
     </window>
     <window class='worksheet' name='estadisticos'>
