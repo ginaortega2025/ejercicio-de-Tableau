@@ -1,0 +1,805 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20251.25.0520.1026                               -->
+<workbook original-version='18.1' source-build='2025.1.2 (20251.25.0520.1026)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SingleValuePerNestSorting />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
+      <aliases enabled='yes' />
+      <column caption='Ajuste de precio' datatype='real' name='[Parámetro 1]' param-domain-type='range' role='measure' type='quantitative' value='1.5'>
+        <calculation class='tableau' formula='1.5' />
+        <range granularity='0.1' max='2.0' min='0.5' />
+      </column>
+    </datasource>
+    <datasource caption='ventas_producto (2)' inline='true' name='federated.1y5b3aq1g4yc0q1ecvs9415q2whc' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='ventas_producto (2)' name='textscan.1fmhvpi125854l1gyv01b1txjlns'>
+            <connection class='textscan' directory='C:/Users/LENOVO/Downloads' filename='ventas_producto (2).csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1fmhvpi125854l1gyv01b1txjlns' name='ventas_producto (2).csv' table='[ventas_producto (2)#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='es_CO' separator=';'>
+            <column datatype='date' name='Fecha' ordinal='0' />
+            <column datatype='string' name='Producto' ordinal='1' />
+            <column datatype='integer' name='Ventas' ordinal='2' />
+            <column datatype='string' name='Ciudad' ordinal='3' />
+            <column datatype='integer' name='Precio Original' ordinal='4' />
+            <column datatype='integer' name='Precio Ajustado' ordinal='5' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[ventas_producto (2).csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;es&quot;</attribute>
+              <attribute datatype='string' name='decimal-char'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;;&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;es_CO&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='thousands-char'>&quot;.&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Fecha</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[Fecha]</local-name>
+            <parent-name>[ventas_producto (2).csv]</parent-name>
+            <remote-alias>Fecha</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[ventas_producto (2).csv_3C4A7F623C12434996783394FA9DC37F]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Producto</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Producto]</local-name>
+            <parent-name>[ventas_producto (2).csv]</parent-name>
+            <remote-alias>Producto</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+            <object-id>[ventas_producto (2).csv_3C4A7F623C12434996783394FA9DC37F]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Ventas</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Ventas]</local-name>
+            <parent-name>[ventas_producto (2).csv]</parent-name>
+            <remote-alias>Ventas</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[ventas_producto (2).csv_3C4A7F623C12434996783394FA9DC37F]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Ciudad</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Ciudad]</local-name>
+            <parent-name>[ventas_producto (2).csv]</parent-name>
+            <remote-alias>Ciudad</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LES_RES' />
+            <object-id>[ventas_producto (2).csv_3C4A7F623C12434996783394FA9DC37F]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Precio Original</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Precio Original]</local-name>
+            <parent-name>[ventas_producto (2).csv]</parent-name>
+            <remote-alias>Precio Original</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[ventas_producto (2).csv_3C4A7F623C12434996783394FA9DC37F]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Precio Ajustado</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Precio Ajustado]</local-name>
+            <parent-name>[ventas_producto (2).csv]</parent-name>
+            <remote-alias>Precio Ajustado</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[ventas_producto (2).csv_3C4A7F623C12434996783394FA9DC37F]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Precio con ajuste' datatype='real' name='[Calculation_2418714492286185472]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[Precio Original] * [Parameters].[Parámetro 1]' />
+      </column>
+      <column datatype='string' name='[Ciudad]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+      <column caption='ventas_producto (2).csv' datatype='table' name='[__tableau_internal_object_id__].[ventas_producto (2).csv_3C4A7F623C12434996783394FA9DC37F]' role='measure' type='quantitative' />
+      <column-instance column='[Ciudad]' derivation='None' name='[none:Ciudad:nk]' pivot='key' type='nominal' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='es_ES' class='hyper' dbname='C:/Users/LENOVO/AppData/Local/Temp/TableauTemp/#TableauTemp_1gf991f1l03vhr1con2251r0ibjj.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='06/04/2025 11:41:31 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Fecha</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[Fecha]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Fecha</remote-alias>
+              <ordinal>0</ordinal>
+              <family>ventas_producto (2).csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>12</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[ventas_producto (2).csv_3C4A7F623C12434996783394FA9DC37F]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Producto</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Producto]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Producto</remote-alias>
+              <ordinal>1</ordinal>
+              <family>ventas_producto (2).csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LES_RES' />
+              <object-id>[ventas_producto (2).csv_3C4A7F623C12434996783394FA9DC37F]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Ventas</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Ventas]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Ventas</remote-alias>
+              <ordinal>2</ordinal>
+              <family>ventas_producto (2).csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>55</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[ventas_producto (2).csv_3C4A7F623C12434996783394FA9DC37F]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Ciudad</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Ciudad]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Ciudad</remote-alias>
+              <ordinal>3</ordinal>
+              <family>ventas_producto (2).csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LES_RES' />
+              <object-id>[ventas_producto (2).csv_3C4A7F623C12434996783394FA9DC37F]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Precio Original</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Precio Original]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Precio Original</remote-alias>
+              <ordinal>4</ordinal>
+              <family>ventas_producto (2).csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>58</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[ventas_producto (2).csv_3C4A7F623C12434996783394FA9DC37F]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Precio Ajustado</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Precio Ajustado]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Precio Ajustado</remote-alias>
+              <ordinal>5</ordinal>
+              <family>ventas_producto (2).csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>60</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[ventas_producto (2).csv_3C4A7F623C12434996783394FA9DC37F]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Ciudad:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Ciudad 1&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Ciudad 5&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;Ciudad 4&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Ciudad 3&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Ciudad 2&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Colombia&quot;' />
+      </semantic-values>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='Ajuste de precio' datatype='real' name='[Parámetro 1]' param-domain-type='range' role='measure' type='quantitative' value='1.5'>
+          <calculation class='tableau' formula='1.5' />
+          <range granularity='0.1' max='2.0' min='0.5' />
+        </column>
+      </datasource-dependencies>
+      <object-graph>
+        <objects>
+          <object caption='ventas_producto (2).csv' id='ventas_producto (2).csv_3C4A7F623C12434996783394FA9DC37F'>
+            <properties context=''>
+              <relation connection='textscan.1fmhvpi125854l1gyv01b1txjlns' name='ventas_producto (2).csv' table='[ventas_producto (2)#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='es_CO' separator=';'>
+                  <column datatype='date' name='Fecha' ordinal='0' />
+                  <column datatype='string' name='Producto' ordinal='1' />
+                  <column datatype='integer' name='Ventas' ordinal='2' />
+                  <column datatype='string' name='Ciudad' ordinal='3' />
+                  <column datatype='integer' name='Precio Original' ordinal='4' />
+                  <column datatype='integer' name='Precio Ajustado' ordinal='5' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <shared-views>
+    <shared-view name='federated.1y5b3aq1g4yc0q1ecvs9415q2whc'>
+      <datasources>
+        <datasource caption='ventas_producto (2)' name='federated.1y5b3aq1g4yc0q1ecvs9415q2whc' />
+      </datasources>
+      <datasource-dependencies datasource='federated.1y5b3aq1g4yc0q1ecvs9415q2whc'>
+        <column datatype='string' name='[Ciudad]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+        <column-instance column='[Ciudad]' derivation='None' name='[none:Ciudad:nk]' pivot='key' type='nominal' />
+      </datasource-dependencies>
+      <filter class='categorical' column='[federated.1y5b3aq1g4yc0q1ecvs9415q2whc].[none:Ciudad:nk]'>
+        <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+          <groupfilter function='member' level='[none:Ciudad:nk]' member='&quot;Ciudad 1&quot;' />
+          <groupfilter function='member' level='[none:Ciudad:nk]' member='&quot;Ciudad 2&quot;' />
+          <groupfilter function='member' level='[none:Ciudad:nk]' member='&quot;Ciudad 4&quot;' />
+          <groupfilter function='member' level='[none:Ciudad:nk]' member='&quot;Ciudad 5&quot;' />
+        </groupfilter>
+        <target field='[federated.1y5b3aq1g4yc0q1ecvs9415q2whc].[none:Ciudad:nk]' />
+      </filter>
+    </shared-view>
+  </shared-views>
+  <worksheets>
+    <worksheet name='estadisticos'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='ventas_producto (2)' name='federated.1y5b3aq1g4yc0q1ecvs9415q2whc' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1y5b3aq1g4yc0q1ecvs9415q2whc'>
+            <column datatype='string' name='[Ciudad]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+            <column datatype='string' name='[Producto]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Ventas]' role='measure' type='quantitative' />
+            <column-instance column='[Ciudad]' derivation='None' name='[none:Ciudad:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Producto]' derivation='None' name='[none:Producto:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Ventas]' derivation='Sum' name='[sum:Ventas:vtavg:qk]' pivot='key' type='quantitative' visual-totals='Avg' />
+          </datasource-dependencies>
+          <single-value-per-nest-shelf-sorts>
+            <single-value-per-nest-shelf-sort dimension-to-sort='[federated.1y5b3aq1g4yc0q1ecvs9415q2whc].[none:Producto:nk]' direction='ASC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.1y5b3aq1g4yc0q1ecvs9415q2whc].[none:Producto:nk]' shelf='rows' />
+          </single-value-per-nest-shelf-sorts>
+          <slices>
+            <column>[federated.1y5b3aq1g4yc0q1ecvs9415q2whc].[none:Ciudad:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1y5b3aq1g4yc0q1ecvs9415q2whc].[sum:Ventas:vtavg:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows total='true'>[federated.1y5b3aq1g4yc0q1ecvs9415q2whc].[none:Producto:nk]</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{C97D4B3E-23FE-4065-96ED-863EBFF67511}' />
+    </worksheet>
+    <worksheet name='precio ajustado vs venta'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='ventas_producto (2)' name='federated.1y5b3aq1g4yc0q1ecvs9415q2whc' />
+            <datasource caption='Parámetros' name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Ajuste de precio' datatype='real' name='[Parámetro 1]' param-domain-type='range' role='measure' type='quantitative' value='1.5'>
+              <calculation class='tableau' formula='1.5' />
+              <range granularity='0.1' max='2.0' min='0.5' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.1y5b3aq1g4yc0q1ecvs9415q2whc'>
+            <column caption='Precio con ajuste' datatype='real' name='[Calculation_2418714492286185472]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[Precio Original] * [Parameters].[Parámetro 1]' />
+            </column>
+            <column datatype='string' name='[Ciudad]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+            <column datatype='integer' name='[Precio Original]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Ventas]' role='measure' type='quantitative' />
+            <column-instance column='[Ciudad]' derivation='None' name='[none:Ciudad:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_2418714492286185472]' derivation='Sum' name='[sum:Calculation_2418714492286185472:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Ventas]' derivation='Sum' name='[sum:Ventas:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.1y5b3aq1g4yc0q1ecvs9415q2whc].[none:Ciudad:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1y5b3aq1g4yc0q1ecvs9415q2whc].[none:Ciudad:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.1y5b3aq1g4yc0q1ecvs9415q2whc].[sum:Ventas:qk]</rows>
+        <cols>[federated.1y5b3aq1g4yc0q1ecvs9415q2whc].[sum:Calculation_2418714492286185472:qk]</cols>
+      </table>
+      <simple-id uuid='{AA03E2F0-AB47-4583-A721-2D2D110F7EAF}' />
+    </worksheet>
+    <worksheet name='ventas totales mensuales'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='ventas_producto (2)' name='federated.1y5b3aq1g4yc0q1ecvs9415q2whc' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1y5b3aq1g4yc0q1ecvs9415q2whc'>
+            <column datatype='string' name='[Ciudad]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+            <column datatype='date' name='[Fecha]' role='dimension' type='ordinal' />
+            <column datatype='integer' name='[Precio Ajustado]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Ventas]' role='measure' type='quantitative' />
+            <column-instance column='[Fecha]' derivation='Month' name='[mn:Fecha:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Ciudad]' derivation='None' name='[none:Ciudad:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Precio Ajustado]' derivation='Sum' name='[sum:Precio Ajustado:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Ventas]' derivation='Sum' name='[sum:Ventas:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.1y5b3aq1g4yc0q1ecvs9415q2whc].[none:Ciudad:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1y5b3aq1g4yc0q1ecvs9415q2whc].[sum:Ventas:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1y5b3aq1g4yc0q1ecvs9415q2whc].[sum:Precio Ajustado:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>([federated.1y5b3aq1g4yc0q1ecvs9415q2whc].[sum:Ventas:qk] + [federated.1y5b3aq1g4yc0q1ecvs9415q2whc].[sum:Precio Ajustado:qk])</rows>
+        <cols>[federated.1y5b3aq1g4yc0q1ecvs9415q2whc].[mn:Fecha:ok]</cols>
+      </table>
+      <simple-id uuid='{9E0421AD-D3B6-4B6A-BB8A-EA145E157C95}' />
+    </worksheet>
+    <worksheet name='ventas x producto'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='ventas_producto (2)' name='federated.1y5b3aq1g4yc0q1ecvs9415q2whc' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1y5b3aq1g4yc0q1ecvs9415q2whc'>
+            <column datatype='string' name='[Ciudad]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+            <column datatype='string' name='[Producto]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Ventas]' role='measure' type='quantitative' />
+            <column-instance column='[Ciudad]' derivation='None' name='[none:Ciudad:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Producto]' derivation='None' name='[none:Producto:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Ventas]' derivation='Sum' name='[sum:Ventas:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.1y5b3aq1g4yc0q1ecvs9415q2whc].[none:Producto:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.1y5b3aq1g4yc0q1ecvs9415q2whc].[sum:Ventas:qk]' shelf='columns' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.1y5b3aq1g4yc0q1ecvs9415q2whc].[none:Ciudad:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1y5b3aq1g4yc0q1ecvs9415q2whc].[none:Ciudad:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.1y5b3aq1g4yc0q1ecvs9415q2whc].[sum:Ventas:qk]</rows>
+        <cols>[federated.1y5b3aq1g4yc0q1ecvs9415q2whc].[none:Producto:nk]</cols>
+      </table>
+      <simple-id uuid='{BA673286-23F7-493E-BC76-82B184C8C4BA}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard 1'>
+      <style />
+      <size maxheight='1360' maxwidth='1250' minheight='560' minwidth='420' sizing-mode='range' />
+      <datasources>
+        <datasource caption='Parámetros' name='Parameters' />
+        <datasource caption='ventas_producto (2)' name='federated.1y5b3aq1g4yc0q1ecvs9415q2whc' />
+      </datasources>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='Ajuste de precio' datatype='real' name='[Parámetro 1]' param-domain-type='range' role='measure' type='quantitative' value='1.5'>
+          <calculation class='tableau' formula='1.5' />
+          <range granularity='0.1' max='2.0' min='0.5' />
+        </column>
+      </datasource-dependencies>
+      <datasource-dependencies datasource='federated.1y5b3aq1g4yc0q1ecvs9415q2whc'>
+        <column datatype='string' name='[Ciudad]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+        <column-instance column='[Ciudad]' derivation='None' name='[none:Ciudad:nk]' pivot='key' type='nominal' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='97892' id='7' param='horz' type-v2='layout-flow' w='98720' x='640' y='1054'>
+            <zone h='97892' id='5' type-v2='layout-basic' w='83840' x='640' y='1054'>
+              <zone h='97892' id='3' name='ventas x producto' w='26225' x='640' y='1054'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='97892' id='10' name='ventas totales mensuales' w='41925' x='42555' y='1054'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='97892' id='13' name='precio ajustado vs venta' w='15690' x='26865' y='1054'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+            <zone fixed-size='186' h='97892' id='6' is-fixed='true' param='vert' type-v2='layout-flow' w='14880' x='84480' y='1054'>
+              <zone h='26614' id='8' name='ventas x producto' param='[federated.1y5b3aq1g4yc0q1ecvs9415q2whc].[none:Ciudad:nk]' type-v2='filter' w='14880' x='84480' y='1054'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='17655' id='9' name='ventas x producto' pane-specification-id='0' param='[federated.1y5b3aq1g4yc0q1ecvs9415q2whc].[none:Ciudad:nk]' type-v2='color' w='14880' x='84480' y='27668'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='10935' id='12' mode='slider' param='[Parameters].[Parámetro 1]' type-v2='paramctrl' w='14880' x='84480' y='45323'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone fixed-size='284' h='38472' id='20' is-fixed='true' name='estadisticos' w='14880' x='84480' y='56258'>
+                <layout-cache fixed-size-w='162' type-h='fixed' type-w='fixed' />
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='1350' minheight='1350' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='26' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97892' id='25' param='vert' type-v2='layout-flow' w='98720' x='640' y='1054'>
+                <zone h='26614' id='8' mode='checkdropdown' name='ventas x producto' param='[federated.1y5b3aq1g4yc0q1ecvs9415q2whc].[none:Ciudad:nk]' type-v2='filter' w='14880' x='84480' y='1054'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='97892' id='3' is-fixed='true' name='ventas x producto' w='26225' x='640' y='1054'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='17655' id='9' name='ventas x producto' pane-specification-id='0' param='[federated.1y5b3aq1g4yc0q1ecvs9415q2whc].[none:Ciudad:nk]' type-v2='color' w='14880' x='84480' y='27668'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='97892' id='13' is-fixed='true' name='precio ajustado vs venta' w='15690' x='26865' y='1054'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='97892' id='10' is-fixed='true' name='ventas totales mensuales' w='41925' x='42555' y='1054'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='10935' id='12' mode='slider' param='[Parameters].[Parámetro 1]' type-v2='paramctrl' w='14880' x='84480' y='45323'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='38472' id='20' is-fixed='true' name='estadisticos' w='14880' x='84480' y='56258'>
+                  <layout-cache fixed-size-w='162' type-h='fixed' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{BD9C42BC-48F2-4E4D-B124-F14184F38812}' />
+    </dashboard>
+  </dashboards>
+  <windows saved-dpi-scale-factor='1.5' source-height='44'>
+    <window class='worksheet' name='ventas x producto'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='174'>
+            <card param='[federated.1y5b3aq1g4yc0q1ecvs9415q2whc].[none:Ciudad:nk]' type='filter' />
+            <card pane-specification-id='0' param='[federated.1y5b3aq1g4yc0q1ecvs9415q2whc].[none:Ciudad:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{ABB0F4A7-C6EF-4A38-BA13-D9B04226715A}' />
+    </window>
+    <window class='worksheet' maximized='true' name='ventas totales mensuales'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='174'>
+            <card param='[federated.1y5b3aq1g4yc0q1ecvs9415q2whc].[none:Ciudad:nk]' type='filter' />
+            <card mode='slider' param='[Parameters].[Parámetro 1]' type='parameter' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{BF1258D4-D76A-4D49-8105-B68157CE22EA}' />
+    </window>
+    <window class='worksheet' name='precio ajustado vs venta'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='174'>
+            <card pane-specification-id='0' param='[federated.1y5b3aq1g4yc0q1ecvs9415q2whc].[none:Ciudad:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{EA41B8CD-A459-4518-8B7F-7EB4828E07FA}' />
+    </window>
+    <window class='dashboard' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='estadisticos' />
+        <viewpoint name='precio ajustado vs venta'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='ventas totales mensuales'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='ventas x producto'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{2DA2C6AA-0E74-40F5-AD49-E1456CDBA7EA}' />
+    </window>
+    <window class='worksheet' name='estadisticos'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{BDC544B1-5C42-4E54-AD3D-E91C44BEE1DE}' />
+    </window>
+  </windows>
+</workbook>
